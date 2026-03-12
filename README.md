@@ -237,29 +237,29 @@ This roadmap tracks the full MVP build from zero to a usable v0.1.0 release. Ite
 
 > Goal: round-trip a Ghostty config with zero TUI code.
 
-- [ ] **1.1** Define `Schema` and `OptionDef` types in `schema.rs`
-  - [ ] 1.1.1 — Represent all supported types: `bool`, `string`, `int`, `float`, `enum`, `color`
-  - [ ] 1.1.2 — Optional fields: `min`, `max`, `values`, `default`, `description`, `section`
-  - [ ] 1.1.3 — Tool metadata: `name`, `config_path`, `format`, `description`
-- [ ] **1.2** TOML schema loader
-  - [ ] 1.2.1 — Parse a single `.toml` schema file into `Schema` struct
-  - [ ] 1.2.2 — Emit useful errors for malformed or missing required fields
-  - [ ] 1.2.3 — Load bundled schemas via `include_str!` at compile time
-  - [ ] 1.2.4 — Scan `~/.config/cfgwow/schemas/` and merge with built-ins
-- [ ] **1.3** Config file reader — `key = value` parser (Ghostty format)
-  - [ ] 1.3.1 — Parse into `Vec<Line>` (comment, key-value, blank, unknown)
-  - [ ] 1.3.2 — Build `HashMap<key, raw_value>` for schema overlay
-  - [ ] 1.3.3 — Handle `~` expansion in config paths
-- [ ] **1.4** In-memory state (`state.rs`)
-  - [ ] 1.4.1 — `AppState`: loaded schema + parsed config lines + pending edits map
-  - [ ] 1.4.2 — `apply_edit(key, value)` — stage a change without writing to disk
-  - [ ] 1.4.3 — `resolve_value(key)` — return edit if staged, else parsed, else default
-- [ ] **1.5** Config file writer
-  - [ ] 1.5.1 — Walk `Vec<Line>`, substitute staged edits in-place
-  - [ ] 1.5.2 — Append any new keys not previously in the file
-  - [ ] 1.5.3 — Preserve comments, ordering, and unknown keys verbatim
-  - [ ] 1.5.4 — Write to a temp file then rename (atomic write)
-- [ ] **1.6** Integration test: read → mutate → write → re-read Ghostty config and assert round-trip
+- [x] **1.1** Define `Schema` and `OptionDef` types in `schema.rs`
+  - [x] 1.1.1 — Represent all supported types: `bool`, `string`, `int`, `float`, `enum`, `color`
+  - [x] 1.1.2 — Optional fields: `min`, `max`, `values`, `default`, `description`, `section`
+  - [x] 1.1.3 — Tool metadata: `name`, `config_path`, `format`, `description`
+- [x] **1.2** TOML schema loader
+  - [x] 1.2.1 — Parse a single `.toml` schema file into `Schema` struct
+  - [x] 1.2.2 — Emit useful errors for malformed or missing required fields
+  - [x] 1.2.3 — Load bundled schemas via `include_str!` at compile time
+  - [x] 1.2.4 — Scan `~/.config/cfgwow/schemas/` and merge with built-ins
+- [x] **1.3** Config file reader — `key = value` parser (Ghostty format)
+  - [x] 1.3.1 — Parse into `Vec<Line>` (comment, key-value, blank, unknown)
+  - [x] 1.3.2 — Build `HashMap<key, raw_value>` for schema overlay
+  - [x] 1.3.3 — Handle `~` expansion in config paths
+- [x] **1.4** In-memory state (`state.rs`)
+  - [x] 1.4.1 — `AppState`: loaded schema + parsed config lines + pending edits map
+  - [x] 1.4.2 — `apply_edit(key, value)` — stage a change without writing to disk
+  - [x] 1.4.3 — `resolve_value(key)` — return edit if staged, else parsed, else default
+- [x] **1.5** Config file writer
+  - [x] 1.5.1 — Walk `Vec<Line>`, substitute staged edits in-place
+  - [x] 1.5.2 — Append any new keys not previously in the file
+  - [x] 1.5.3 — Preserve comments, ordering, and unknown keys verbatim
+  - [x] 1.5.4 — Write to a temp file then rename (atomic write)
+- [x] **1.6** Integration test: read → mutate → write → re-read Ghostty config and assert round-trip
 
 ---
 
