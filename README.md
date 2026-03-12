@@ -31,15 +31,15 @@ Officially ships with schemas for **Ghostty**, **tmux**, and **Fish shell**. Inf
 ├─────────────┬────────────────────────────────────────────────┤
 │ Tools       │ ▸ Font                                         │
 │             │                                                │
-│ ▶ Ghostty   │   font-size          [  13  ] ▲ ▼             │
-│   tmux      │   font-family        [ JetBrains Mono       ] │
-│   fish      │   font-style         [ Regular      ▼ ]       │
+│ ▶ Ghostty   │   font-size          [  13  ] ▲ ▼              │
+│   tmux      │   font-family        [ JetBrains Mono       ]  │
+│   fish      │   font-style         [ Regular      ▼ ]        │
 │   ─────     │                                                │
 │   + custom  │ ▸ Appearance                                   │
 │             │                                                │
 │             │   theme              [ catppuccin-frappe     ] │
-│             │   background-opacity [  0.95  ] ▲ ▼           │
-│             │   cursor-style       [ block         ▼ ]      │
+│             │   background-opacity [  0.95  ] ▲ ▼            │
+│             │   cursor-style       [ block         ▼ ]       │
 ├─────────────┴────────────────────────────────────────────────┤
 │ Font size in points. Range: 6–72   Default: 13   Type: int   │
 └──────────────────────────────────────────────────────────────┘
