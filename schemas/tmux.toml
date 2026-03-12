@@ -1,0 +1,5 @@
+[tool]
+name = "tmux"
+description = "tmux terminal multiplexer"
+config_path = "~/.tmux.conf"
+format = "key_space_value"

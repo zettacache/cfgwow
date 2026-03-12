@@ -1,0 +1,5 @@
+[tool]
+name = "fish"
+description = "Fish shell"
+config_path = "~/.config/fish/config.fish"
+format = "fish_set"

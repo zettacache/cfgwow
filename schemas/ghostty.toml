@@ -1,0 +1,5 @@
+[tool]
+name = "ghostty"
+description = "Ghostty terminal emulator"
+config_path = "~/.config/ghostty/config"
+format = "key_equals_value"
